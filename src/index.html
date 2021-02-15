@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Provider Store</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/providerstore-logo-dark.svg">
+</head>
+
+<body>
+    <div id="root">
+        <div class="root-background"></div>
+        <nav>
+            <div class="container">
+                <a class="nav--logo" href=".">
+                    <img src="img/providerstore-logo-white.svg" alt="Provider Store logo">
+                </a>
+                <ul class="nav--links">
+                    <li class="nav--link">
+                        <a href="#shop">
+                            Store
+                        </a>
+                    </li>
+                    <li class="nav--link">
+                        <a href="#search">
+                            Search
+                        </a>
+                    </li>
+                    <li class="nav--link is-order">
+                        <a href="#order" data-items="0">
+                            Your Order
+                        </a>
+                    </li>
+                    <li class="nav--link is-menu">
+                        <a href="#menu">
+                            <span class="nav-toggle is-close"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="menu" id="menu">
+            <div class="container">
+                <div class="nav">
+                    <div class="wrapper">
+                        <a href="#">
+                            <span class="nav-toggle is-open"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="collections">
+                <div class="wrapper">
+                    <aside class="collection-images">
+                        <div class="collection-images--image" data-id="1"
+                            style="background-image: url(img/liza-pooor-4mpTuXy4Y8c-unsplash.jpg);"></div>
+                        <div class="collection-images--image" data-id="2"
+                            style="background-image: url(img/alex-kalinin-tAOOClnWL10-unsplash.jpg);"></div>
+                        <div class="collection-images--image" data-id="3"
+                            style="background-image: url(img/alexandra-gorn-W5dsm9n6e3g-unsplash.jpg);"></div>
+                        <div class="collection-images--image" data-id="4"
+                            style="background-image: url(img/andrea-davis-ytBVkBA6Yoc-unsplash.jpg);"></div>
+                        <div class="collection-images--image" data-id="5"
+                            style="background-image: url(img/gabrielle-henderson-DTvzW2sl9eE-unsplash.jpg);"></div>
+                        <div class="collection-images--image" data-id="6"
+                            style="background-image: url(img/kara-eads-3N7OvxUPnqg-unsplash.jpg);"></div>
+                        <div class="collection-images--image" data-id="7"
+                            style="background-image: url(img/liza-pooor-4mpTuXy4Y8c-unsplash.jpg);"></div>
+                        <div class="collection-images--image" data-id="8"
+                            style="background-image: url(img/sandra-martins-dETnmtfStYo-unsplash.jpg);"></div>
+                    </aside>
+                    <ul class="collection-links">
+                        <li class="collection-links--link" data-id="1">
+                            <a href="link1" data-items="99">Shop all</a>
+                        </li>
+                        <li class="collection-links--link" data-id="2">
+                            <a href="link2" data-items="32">New arrivals</a>
+                        </li>
+                        <li class="collection-links--link" data-id="3">
+                            <a href="link3" data-items="23">Candles</a>
+                        </li>
+                        <li class="collection-links--link" data-id="4">
+                            <a href="link4" data-items="12">Ceramics</a>
+                        </li>
+                        <li class="collection-links--link" data-id="5">
+                            <a href="link5" data-items="12">Homewares</a>
+                        </li>
+                        <li class="collection-links--link" data-id="6">
+                            <a href="link6" data-items="3">Bath</a>
+                        </li>
+                        <li class="collection-links--link" data-id="7">
+                            <a href="link7" data-items="13">Kitchen</a>
+                        </li>
+                        <li class="collection-links--link" data-id="8">
+                            <a href="link8" data-items="21">Aroma</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-background"></div>
+        </div>
+    </div>
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

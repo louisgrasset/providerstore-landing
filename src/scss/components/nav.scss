@@ -1,0 +1,86 @@
+@import 'nav-toggle';
+
+nav {
+    $at: &;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      color: var(--white);
+      .nav {
+        &--logo {
+            display: block;
+          img {
+            display: block;
+              height: 100%;
+              max-width: 100%;
+          }
+        }
+  
+        &--links {
+          list-style-type: none;
+          display: block;
+          margin: 0;
+          margin-right: 3rem;
+          padding-left: 0;
+          @media screen and (min-width: 768px) {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+  
+        &--link {
+          a {
+            display: block;
+            color: inherit;
+            padding: 2rem 1rem;
+            text-decoration: none;
+            font-size: 0.9rem;
+          }
+
+          @media screen and (max-width: 768px) {
+            &:nth-child(1), &:nth-child(2) {
+              display: none;
+            }    
+          }
+
+          &.is-order {
+            position: relative;
+            padding-right: 2rem;
+            a::after {
+              content: attr(data-items);
+              height: 1.3rem;
+              width: 1.3rem;
+              border-radius: 50%;
+              border: 1px solid var(--white);
+              text-align: center;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              right: 0;
+              line-height: 0;
+              top: calc(50% - .65rem);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+            }
+          }
+          &.is-menu {
+            display: block;
+            top: calc(50% - .4rem);
+            a {
+                padding: 0;
+            }
+          }
+          &:last-child {
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+  
