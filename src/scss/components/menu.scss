@@ -9,8 +9,23 @@
     box-sizing: border-box;
     overflow: hidden;
 
+
+    &:not(:target) {
+        .collections .collection-images--image.is-focused {
+            opacity: 0;
+        }
+        .collections .collection-links--link {
+            transition-duration: .2s;
+        }
+    }
+    
     &:target {
         height: 100vh;
+        .collections .collection-links--link {
+            transform: translateY(0);
+            opacity: 1;
+            @include delayItemsTransition(8, 0.05, true);
+        }
     }
 
     .menu-background {

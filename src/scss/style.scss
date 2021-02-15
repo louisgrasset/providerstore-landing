@@ -1,6 +1,9 @@
-@import 'colors';
+@import 'utils/mixins';
+@import 'utils/colors';
 @import 'fonts';
 @import 'base';
 @import 'components/nav';
 @import 'components/menu';
+@import 'components/cart';
 @import 'components/collections';
+@import 'components/mouse-tracker';

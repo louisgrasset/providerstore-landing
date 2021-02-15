@@ -1,0 +1,28 @@
+.mouse-tracker {
+    pointer-events: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 100;
+    border: 1px solid var(--terciary);
+    transition: all .4s ease-out;
+    box-sizing: border-box;
+    transform-origin: center center;
+    &.is-triggered {
+        height: 3rem;
+        width: 3rem;
+    }
+    &.is-clicked {
+        transition: all .1s ease-in !important;
+        transform: scale(0.3);
+    }
+    &.is-hidden {
+        opacity: 0;
+        transform: scale(0);
+    }
+    // Hide tracker on non touch supported devices
+    @media (hover: none){
+        display: none;
+    }
+}

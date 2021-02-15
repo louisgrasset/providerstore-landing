@@ -1,7 +1,13 @@
 @font-face {
     font-family: 'Ashbury';
-    src: url('../fonts/Ashbury.woff2') format('woff2'),
-         url('../fonts/Ashbury.woff') format('woff');
-    font-weight: normal;
+    src: url('../fonts/ashbury-regular.woff2') format('woff2'),
+         url('../fonts/ashbury-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ashbury';
+    src: url('../fonts/ashbury-light.otf') format('opentype');
+    font-weight: 300;
     font-style: normal;
 }

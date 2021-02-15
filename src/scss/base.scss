@@ -13,7 +13,13 @@ body {
   font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 }
 
+body, body * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 #root {
+  overflow-y: hidden;
   position: relative;
   padding: 0 2.5rem;
   box-sizing: border-box;
@@ -27,15 +33,6 @@ body {
     background-image: url('../img/collov-home-design--5HHAP5UWFM-unsplash.jpg');
     background-size: cover;
     background-position: center center;
-    animation: root 1.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
-    @keyframes root {
-      from {
-        transform: scale(1.4);
-      }
-      to {
-        transform: scale(1);
-      }
-    }
     &::after {
       content: '';
       height: 100%;
@@ -43,14 +40,13 @@ body {
       position: absolute;
       background-color: var(--white);
       transform-origin: bottom;
-      animation: rootafter 1.3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
     }
-    @keyframes rootafter {
-      from {
-        transform: scaleY(1);
-      }
-      to {
-        transform: scaleY(0);
+  }
+  &.is-ready {
+    .root-background {
+      animation: root 1.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+      &::after {
+        animation: rootafter 1.3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
       }
     }
   }
@@ -63,6 +59,24 @@ body {
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes root {
+    from {
+      transform: scale(1.4);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes rootafter {
+    from {
+      transform: scaleY(1);
+    }
+    to {
+      transform: scaleY(0);
     }
   }
 }

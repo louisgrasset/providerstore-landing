@@ -1,0 +1,16 @@
+@mixin delayItemsTransition ($numberOfItems, $delay, $reverse: false) {
+    @if reverse {
+        @for $i from 1 through $numberOfItems {
+            &:nth-child(#{$i}) {
+                transition-delay: #{$delay * $i}s;
+            }
+        }
+    }
+    @else {
+        @for $i from 1 through $numberOfItems {
+            &:nth-child(#{$i}) {
+                transition-delay: #{$delay * ($numberOfItems - $i + 1)}s;
+            }
+        }
+    }
+}
