@@ -13,7 +13,7 @@
     "publish": "npm run build && mkdir -p ./public && npm run copy",
     "serve": "serve ./src/",
     "dev": "concurrently --kill-others \"npm run watch\" \"npm run serve\"",
-    "copy": "npm run copyStyles && npm run copyScripts && npm run copyImages && npm run copyTemplates",
+    "copy": "npm run copyStyles && npm run copyScripts && npm run copyFonts && npm run copyImages && npm run copyTemplates",
     "copyStyles": "cp -R ./src/css ./public",
     "copyFonts": "cp -R ./src/fonts ./public",
     "copyScripts": "cp -R ./src/js ./public",
